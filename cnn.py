@@ -68,8 +68,8 @@ X_test = X_test/255.0
 
 # Reshaping the input images to include the channel dimension: (num_images, height, width, channels)
 # --> add your Python code here
-X_train = X_train.reshape(1547, 32, 32, 1)
-X_test = X_test.reshape(387, 32, 32, 1)
+X_train = X_train.reshape(-1, 32, 32, 1)
+X_test = X_test.reshape(-1, 32, 32, 1)
 
 # Building a CNN model
 model = models.Sequential([
